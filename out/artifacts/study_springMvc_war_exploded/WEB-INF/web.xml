@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
     <!--配置前端控制器-->
     <servlet>
         <servlet-name>dispatcher</servlet-name>
@@ -18,4 +19,15 @@
         <!--*.do是SpringMVC使用-->
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+
+    <!--配置过滤器-->
+<!--    <filter>-->
+<!--        <filter-name>encoding</filter-name>-->
+<!--        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>-->
+<!--    </filter>-->
+<!--    &lt;!&ndash;配置需要过滤的url&ndash;&gt;-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>encoding</filter-name>-->
+<!--        <url-pattern>*.do</url-pattern>-->
+<!--    </filter-mapping>-->
 </web-app>

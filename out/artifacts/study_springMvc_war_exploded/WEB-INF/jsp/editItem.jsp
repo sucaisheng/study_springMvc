@@ -26,8 +26,7 @@
 
 			<tr>
 				<td>商品生产日期</td>
-				<td><input type="text" name="createtime"
-						   value="${item.createtime}" /></td>
+				<td><input type="text" name="createtime" value="${item.createtime}" /></td>
 			</tr>
 
 

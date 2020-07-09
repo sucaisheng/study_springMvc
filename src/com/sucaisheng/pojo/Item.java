@@ -1,4 +1,4 @@
-package com.sucaisheng.controller.pojo;
+package com.sucaisheng.pojo;
 
 import java.io.Serializable;
 

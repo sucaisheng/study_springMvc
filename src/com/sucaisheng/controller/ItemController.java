@@ -1,13 +1,16 @@
 package com.sucaisheng.controller;
 
-import com.sucaisheng.controller.pojo.Item;
+import com.sucaisheng.pojo.Item;
+import com.sucaisheng.service.IItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -22,6 +25,8 @@ public class ItemController {
 
     @Autowired
     JdbcTemplate jt;
+    @Autowired
+    IItemService iItemService;
 
     @RequestMapping("/itemList.do")
     public ModelAndView getItemList(){
@@ -42,5 +47,32 @@ public class ItemController {
         mav.addObject("itemList",itemList);
         mav.setViewName("itemList");
         return mav;
+    }
+
+    /**
+     * 根据id获取item
+     * */
+    @RequestMapping("/editItem.do")
+    public ModelAndView getItemById(HttpServletRequest resp){
+        String id = resp.getParameter("id");
+        Item item = iItemService.getItemById(id);
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("item",item);
+        mav.setViewName("editItem");
+        return mav;
+    }
+
+    @RequestMapping("/updateItem.do")
+    public String updateItem(Item item, Model model){
+        System.out.println("515587458" + item);
+        int crows = iItemService.updateItem(item);
+        if (crows > 0){
+            List<Item> itemList = iItemService.getAllItems();
+            model.addAttribute("itemList",itemList);
+            return "itemList";
+        }
+        else{
+            return "editList";
+        }
     }
 }
