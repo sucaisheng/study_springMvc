@@ -21,5 +21,21 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="aopalliance-1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.16" level="application_server_libraries" />
+    <orderEntry type="library" name="asm-8.0.1" level="project" />
+    <orderEntry type="library" name="junit-4.13" level="project" />
+    <orderEntry type="library" name="slf4j-api-2.0.0-alpha1" level="project" />
+    <orderEntry type="library" name="commons-codec-1.14" level="project" />
+    <orderEntry type="library" name="commons-lang3-3.10" level="project" />
+    <orderEntry type="library" name="jackson-databind-2.4.2" level="project" />
+    <orderEntry type="library" name="jackson-databind-2.9.4" level="project" />
+    <orderEntry type="library" name="spring-aop-5.0.3.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-aspects-5.0.3.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-context-support-5.0.3.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-expression-5.0.3.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-jdbc-5.0.3.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-jms-5.0.3.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-messaging-5.0.3.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-tx-5.0.3.RELEASE" level="project" />
+    <orderEntry type="library" name="aopalliance-1.0 (2)" level="project" />
   </component>
 </module>
