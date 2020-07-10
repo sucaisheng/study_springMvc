@@ -37,4 +37,14 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.sucaisheng.mapper"></property>
     </bean>
+
+    <!--配置文件解析器
+        id或者name只能是multipartResolver
+        1M = 1024*1024
+        默认单位是B
+    -->
+    <bean name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="1000000"></property>
+        <property name="defaultEncoding" value="UTF-8"></property>
+    </bean>
 </beans>

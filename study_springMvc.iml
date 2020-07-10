@@ -37,5 +37,7 @@
     <orderEntry type="library" name="spring-messaging-5.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="spring-tx-5.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="aopalliance-1.0 (2)" level="project" />
+    <orderEntry type="library" name="commons-io-2.7" level="project" />
+    <orderEntry type="library" name="commons-fileupload-1.2.2" level="project" />
   </component>
 </module>
