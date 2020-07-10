@@ -21,13 +21,17 @@
     </servlet-mapping>
 
     <!--配置过滤器-->
-<!--    <filter>-->
-<!--        <filter-name>encoding</filter-name>-->
-<!--        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>-->
-<!--    </filter>-->
-<!--    &lt;!&ndash;配置需要过滤的url&ndash;&gt;-->
-<!--    <filter-mapping>-->
-<!--        <filter-name>encoding</filter-name>-->
-<!--        <url-pattern>*.do</url-pattern>-->
-<!--    </filter-mapping>-->
+    <filter>
+        <filter-name>encoding</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <!--配置需要过滤的url-->
+    <filter-mapping>
+        <filter-name>encoding</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
 </web-app>

@@ -28,4 +28,9 @@ public class ItemServiceImpl implements IItemService {
     public List<Item> getAllItems() {
         return iItemMapper.getAllItems();
     }
+
+    @Override
+    public int deleteItems(String[] ids) {
+        return iItemMapper.deleteItems(ids);
+    }
 }

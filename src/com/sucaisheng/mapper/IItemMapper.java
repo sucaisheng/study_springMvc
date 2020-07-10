@@ -10,4 +10,6 @@ public interface IItemMapper {
     int updateItem(Item item);
 
     List<Item> getAllItems();
+
+    int deleteItems(String[] ids);
 }

@@ -11,4 +11,6 @@ public interface IItemService {
     int updateItem(Item item);
     //获取所有item
     List<Item> getAllItems();
+
+    int deleteItems(String[] ids);
 }

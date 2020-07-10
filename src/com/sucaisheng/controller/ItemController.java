@@ -13,6 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -74,5 +76,16 @@ public class ItemController {
         else{
             return "editList";
         }
+    }
+
+    @RequestMapping("/deleteItems.do")
+    public String deleteItems(String[] ids , Model model){
+        System.out.println("1656458448" + Arrays.toString(ids));
+        int crows = iItemService.deleteItems(ids);
+        if(crows > 0){
+            List<Item> itemList = iItemService.getAllItems();
+            model.addAttribute("itemList",itemList);
+        }
+        return "itemList";
     }
 }
