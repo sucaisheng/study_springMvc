@@ -47,4 +47,12 @@
         <property name="maxUploadSize" value="1000000"></property>
         <property name="defaultEncoding" value="UTF-8"></property>
     </bean>
+
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean name="myHandleInterceptor" class="com.sucaisheng.interceptor.MyHandlerInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

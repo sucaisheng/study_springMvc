@@ -8,7 +8,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -105,5 +107,18 @@ public class ItemController {
             model.addAttribute("itemList",itemList);
         }
         return "itemList";
+    }
+
+    /**
+     * @RequestBody将json格式的数据转换成对象，不经常使用
+     * @ResponseBody将对象转换成json格式
+     * @param item
+     * @return
+     */
+    @RequestMapping("/json.do")
+    @ResponseBody
+    public Item jsonTest(@RequestBody Item item){
+        System.out.println(item);
+        return item;
     }
 }
